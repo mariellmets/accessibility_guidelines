@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="et">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Juurdepääsetavussuunised</title>
+		
+		<link rel="stylesheet" href="a11yAccordion.min.css" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<h1>Juurdepääsetavussuunised</h1>
+			<div class="header-date">Uuendatud: 22.05.2017</div>
+		</header>
+		
+		<nav title="Filtrid ja sisukataloog">
+			<div class="filter-header">Filtreeri:</div>
+			<div class="filters">
+				<div class="filter-block">
+					<b class="nav-header">Tüüp:</b>
+					<label>
+						<input type="checkbox" value="O" class="filter" checked> Soovitatav
+					</label>
+					<label>
+						<input type="checkbox" value="A" class="filter" checked> WCAG A
+					</label>
+					<label>
+						<input type="checkbox" value="AA" class="filter" checked> WCAG AA
+					</label>
+					<label>
+						<input type="checkbox" value="M" class="filter" checked> Mobiil
+					</label>
+				</div>
+				<div class="filter-block">
+					<b class="nav-header">Sihtgrupp:</b>
+					<label>
+						<input type="checkbox" value="des" class="filter" checked> Disainerile
+					</label>
+					<label>
+						<input type="checkbox" value="dev" class="filter" checked> Arendajale
+					</label>
+					<label>
+						<input type="checkbox" value="sisu" class="filter" checked> Sisuloojale
+					</label>
+				</div>
+			</div>
+			<div class="filter-header">Liigu sisuni:</div>
+			<div class="contents">
+				<ul class="content-list">
+					<li><a href="#a11yAccordion-row-0">Üldised põhimõtted</a></li>
+					<li><a href="#a11yAccordion-row-1">Lehe andmed</a></li>
+					<li><a href="#a11yAccordion-row-2">Navigatsioon</a></li>
+					<li><a href="#a11yAccordion-row-3">Pealkirjad</a></li>
+					<li><a href="#a11yAccordion-row-4">Sisu paigutus</a></li>
+					<li><a href="#a11yAccordion-row-5">Tekst</a></li>
+					<li><a href="#a11yAccordion-row-6">Lingid</a></li>
+					<li><a href="#a11yAccordion-row-7">Värvid</a></li>
+					<li><a href="#a11yAccordion-row-8">Pildid</a></li>
+					<li><a href="#a11yAccordion-row-9">Ikoonid</a></li>
+					<li><a href="#a11yAccordion-row-10">Heli ja video</a></li>
+					<li><a href="#a11yAccordion-row-11">Vormid</a></li>
+					<li><a href="#a11yAccordion-row-12">Veateated</a></li>
+					<li><a href="#a11yAccordion-row-13">Nupud</a></li>
+					<li><a href="#a11yAccordion-row-14">Tabelid</a></li>
+				</ul>
+			</div>
+		</nav>
+		
+		<button class="close-all">Sulge kõik</button>
+		<main id="main">
+			<ul class="content a11yAccordion a11yAccordion-light" id="accordion">
+				<!--Siia tulevad andmed-->
+			</ul>
+		</main>
+		
+		<script src="jquery-1.10.0.min.js"></script>
+		<script src="a11yAccordion.js"></script>
+		<script src="contentData.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
+
