@@ -74,7 +74,7 @@ var _extends = Object.assign || function(e) {
                 ids: {
                     noResultsDivID: "a11yAccordion-noResultsItem",
                     searchDivID: "a11yAccordion-searchPanel",
-                    rowIdStringPrefix: "a11yAccordion-row-"
+                    rowIdStringPrefix: "a11yaccordion-row-"
                 }
             };
             s = _extends({}, r, s);
