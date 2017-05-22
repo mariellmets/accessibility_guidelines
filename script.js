@@ -68,10 +68,10 @@ $(document).ready(function() {
     var scrollTime = 300;
 
     $('.content-list li a').click(function() {
-        $("html, body").animate({
-            scrollTop: $( $(this).attr("href") ).offset().top + offset 
+        $('html, body').animate({
+            scrollTop: $( $(this).attr('href') ).offset().top + offset 
         }, scrollTime);
-		var sHref = this.href.split("-");
+		var sHref = this.href.split('-');
 		accordion.uncollapseRow( sHref[sHref.length - 1] );
         return false;
     });
