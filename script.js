@@ -68,11 +68,11 @@ $(document).ready(function() {
     var scrollTime = 300;
 
     $('.content-list li a').click(function() {
+		console.log($("#a11yaccordion-row-" + $(this).data('target') ));
         $('html, body').animate({
-            scrollTop: $( $(this).attr('href') ).offset().top + offset 
+            scrollTop: $("#a11yaccordion-row-" + $(this).data('target') ).offset().top + offset 
         }, scrollTime);
-		var sHref = this.href.split('-');
-		accordion.uncollapseRow( sHref[sHref.length - 1] );
+		accordion.uncollapseRow( $(this).data('target') );
         return false;
     });
 	
