@@ -11,7 +11,7 @@ $(document).ready(function() {
         var blockContent = $("<ol class='a11yAccordionHideArea'></ol>");
 		
 		//HTML no-results jupi jaoks
-        var noResults = $("<div class='no-results'>Filtritetele vastavat sisu ei leitud</div>");
+        var noResults = $("<div class='no-results'>Filtritele vastavat sisu ei leitud</div>");
 
         //Siin loopitakse läbi iga ploki sektsioonide
         for (j = 0; j < contentData[i].sections.length; j++) {
@@ -36,7 +36,7 @@ $(document).ready(function() {
 
     //Tee contendist akordionid
     var accordion = new A11yAccordion({
-		parentSelector: '#accordion',
+	parentSelector: '#accordion',
         showOne: false,
         overallSearch: true,
         searchActionType: 'collapse',
@@ -53,7 +53,7 @@ $(document).ready(function() {
 
     //Paneks filtrid tööle
     $(".filter").change(function() {
-		$(".filterable").addClass('exclude');
+	$(".filterable").addClass('exclude');
         var unChecked = $(".filter:not(:checked)");
         var exclusionList = [];
         if (unChecked.length) {
@@ -72,7 +72,6 @@ $(document).ready(function() {
     var scrollTime = 300;
 
     $('.content-list li a').click(function() {
-		console.log($("#a11yaccordion-row-" + $(this).data('target') ));
         $('html, body').animate({
             scrollTop: $("#a11yaccordion-row-" + $(this).data('target') ).offset().top + offset 
         }, scrollTime);
