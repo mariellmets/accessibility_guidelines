@@ -9,6 +9,9 @@ $(document).ready(function() {
 		//Elemendid on deklareeritud jQuery objektidena, et saaks neile enne lehele lisamist HTML-i appendida
         var title = $("<div class='a11yAccordionItemHeader'><h2>" + contentData[i].title + "</h2></div>")
         var blockContent = $("<ol class='a11yAccordionHideArea'></ol>");
+		
+		//HTML no-results jupi jaoks
+        var noResults = $("<div class='no-results'>Filtritetele vastavat sisu ei leitud</div>");
 
         //Siin loopitakse läbi iga ploki sektsioonide
         for (j = 0; j < contentData[i].sections.length; j++) {
@@ -19,6 +22,8 @@ $(document).ready(function() {
 			//Äsja loodud section pane blocki sisse
             blockContent.append(section);
         }
+		//Tee nii, et no-results oleks peale sectioneid
+        blockContent.append(noResults);
 
         //Pane lisatud ploki sisse sisu
         block.append(title);
@@ -32,7 +37,6 @@ $(document).ready(function() {
     //Tee contendist akordionid
     var accordion = new A11yAccordion({
 		parentSelector: '#accordion',
-        hiddenLinkDescription: 'row with data in the Forth Accordion',
         showOne: false,
         overallSearch: true,
         searchActionType: 'collapse',
@@ -49,7 +53,7 @@ $(document).ready(function() {
 
     //Paneks filtrid tööle
     $(".filter").change(function() {
-        $(".filterable").hide();
+		$(".filterable").addClass('exclude');
         var unChecked = $(".filter:not(:checked)");
         var exclusionList = [];
         if (unChecked.length) {
@@ -57,9 +61,9 @@ $(document).ready(function() {
                 exclusionList.push("." + this.value);
             });
             exclusionList = exclusionList.join(',');
-            $(".filterable").not(exclusionList).show();
+            $(".filterable").not(exclusionList).removeClass('exclude');
         } else {
-            $(".filterable").show();
+            $(".filterable").removeClass('exclude');
         }
     });
 	
