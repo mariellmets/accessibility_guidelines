@@ -63,6 +63,19 @@ nav{
 	padding-right: 0;
 }
 
+.exclude {
+    display: none;
+}
+
+.no-results{
+	color: #bebebe;
+	font-size: 0.9rem;
+}
+
+.filterable:not(.exclude) ~ .no-results{
+	display:none;
+}
+
 .nav-header{
 	text-transform: uppercase;
 	font-family: "Arial", sans-serif;
