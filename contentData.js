@@ -92,7 +92,7 @@ var contentData = [{
         content: "Menüü, otsing, keelevalik ja sulgemisnupp peavad olema veebilehel nähtaval ja oodatavas kohtas. Mobiilis peaks olema lisaks menüü ikoonile ka kiri “<b>Menüü</b>”.<br><div class='examples'><figure class='good'><img alt='Mobiili menüü nupu kõrvale on kirjutatud Menüü' src='img/mobile_menu.png'><figcaption>Lisaks ikoonile on olemas ka tekst</figcaption></figure><figure class='bad'><img alt='Mobiili menüü ikoon asub lehe keskel logo kõrval' src='img/mobile.png'><figcaption>Menüü ikooni võib pidada logo osaks</figcaption></figure></div>"
     }, {
         tags: "AA des",
-        content: "Navigeerimiseks peab olema vähemalt kaks võimalust: lisaks menüüle näiteks <b>otsing</b>, <b>sisukaart</b> (mis töötab ilma JavaScriptita) või <b>jäljerada</b> (<i>breadcrumbs</i>).<pre>&lt;nav aria-label=“Asud siin:”&gt;<br>   &lt;a href=“…”&gt;Avaleht&lt;/a&gt;<br>   &lt;a href=“…”&gt;Raamatud&lt;/a&gt;<br>   &lt;span aria-label=“Avatud leht:”&gt;Looduse lood&lt;/span&gt;<br>&lt;/nav&gt;"
+        content: "Navigeerimiseks peab olema vähemalt kaks võimalust: lisaks menüüle näiteks <b>otsing</b>, <b>sisukaart</b> (mis töötab ilma JavaScriptita) või <b>jäljerada</b> (<i>breadcrumbs</i>).<pre>&lt;nav aria-label=“Asud siin:”&gt;<br>   &lt;a href=“…”&gt;Avaleht&lt;/a&gt;<br>   &lt;a href=“…”&gt;Raamatud&lt;/a&gt;<br>   &lt;span aria-label=“Avatud leht: Looduse lood”&gt;Looduse lood&lt;/span&gt;<br>&lt;/nav&gt;"
     }, {
         tags: "O des",
         content: "Otsingukasti juures peab olema selgelt arusaadav, kuidas otsingut käivitada - kas vajutada mingit nuppu või <i>enter</i> kahvi.<br><div class='examples'><figure class='good'><img alt='Otsingukasti sisse on kirjutatud Otsi ning selle kõrval on nupp kirjaga Mine' src='img/search_g.jpg'><figcaption>On selge, et vajutada tuleb nuppu</figcaption></figure><figure class='bad'><img alt='Otsingukasti sees on ainult luubi ikoon' src='img/search_b.jpg'><figcaption>Ei ole selge, kuidas otsingut käivitada</figcaption></figure></div>"
@@ -112,7 +112,7 @@ var contentData = [{
         tags: "O dev",
         content: "Menüü peab avanema sellele vajutades. Ei tohi nõuda kasutajalt <b>hõljutamist</b> (<i>hover</i>) või <b>libistamist</b> (<i>slide</i>). Menüü ei tohi iseenesest mingi aja järel sulguda."
     }, {
-        tags: "A des",
+        tags: "A dev",
         content: "Soovitatav on lisada mugavaid <b>ülehüppamislinke</b>, näiteks “Jäta … vahele”. Lehe kõige esimene element peab olema “Liigu põhisisu juurde”, mis teeb tabuleerivate kasutajate jaoks infoni jõudmise mugavamaks.<pre>&lt;a href=“#sisu”&gt;Liigu põhisisu juurde&lt;/a&gt;<br>...<br>&lt;main id=“sisu”&gt;</pre><figure><img alt='Ülehüppamislink ministeeriumi kodulehe alguses' class='single' src='img/pohisisu.png'><figcaption>Ülehüppamislink tuleb nähtavale fokuseerides</figcaption></figure>"
     }]
 }, {
@@ -238,8 +238,11 @@ var contentData = [{
         tags: "O dev",
         content: "Lehel ei tohi olla <b>katkiseid linke</b>, mis ei vii kasutajat õigesse kohta."
     }, {
+        tags: "O dev",
+        content: "Kui linke on väga palju, võiks need grupeerida nimekirja &lt;ul&gt; või &lt;ol&gt; märgendiga."
+    }, {
         tags: "O des",
-        content: "Kui linke on väga palju, võiks need grupeerida nimekirja &lt;ul&gt; või &lt;ol&gt; märgendiga. Lingid ei tohi paikneda üksteisele liiga lähedal ega ka liiga kaugel."
+        content: "Lingid ei tohi paikneda üksteisele liiga lähedal ega ka liiga kaugel."
     }, {
         tags: "O dev",
         content: "<h3>Link, mis laeb alla faili</h3><br>Teavitus, et algab faili allalaadimine, peab olema lingi tekstis näha. Ära tuleks märkida ka faili suurus ning formaat, et aeglase või piiratud mahuga interneti kasutajad saaksid vältida aja- ja rahakulu.<pre>&lt;a href=“doc.pdf”&gt;Lae alla dokumendi fail (1MB PDF)&lt;/a&gt;</pre>"
@@ -340,11 +343,11 @@ var contentData = [{
         tags: "A dev",
         content: "Igal vormiväljal peab olema täpselt üks pealkirja <b>&lt;label&gt;</b>, mis on temaga seotud <b>id=“…”</b> ja <b>for=“…”</b> atribuutide kaudu. Pealkiri peab  visuaalselt paiknema vormivälja suhtes nii, et nende kokkukuuluvus oleks selge.<pre>&lt;label for=“nimi”&gt;Nimi:&lt;/label&gt;<br>&lt;input type=“text” name=“nimi” id=“nimi”&gt;</pre>"
     }, {
-        tags: "O dev",
+        tags: "O des",
         content: "Kasutajalt ei tohiks nõuda sisestatud andmete meelde jätmist, vaid tuleks näidata tema eelmisi valikuid ja varem sisestatud andmeid."
     }, {
         tags: "O dev",
-        content: "Kui vorm on jaotatud sammudeks, mis asuvad mitmel lehel, tuleks kirjutada lehe <title> märgendisse, mitmenda sammu juures ollakse."
+        content: "Kui vorm on jaotatud sammudeks, mis asuvad mitmel lehel, tuleks kirjutada lehe <b>&lt;title&gt;</b> märgendisse, mitmenda sammu juures ollakse."
     }, {
         tags: "A dev",
         content: "Vormielementi fokuseerides või klikkides ei tohi juhtuda midagi ettearvamatut ega muutuda lehe kontekst."
@@ -358,11 +361,11 @@ var contentData = [{
         tags: "A dev",
         content: "Kui info tuleb sisestada mingil kindlal kujul, tuleb seda kuju kirjeldada sisestuskastiga seotud <b>&lt;label&gt;</b> märgendis. Soovitud kuju võib kirjutada ka sisestuskasti <b>placeholder=“…”</b> atribuuti, kuid see ei tohi asendada <b>&lt;label&gt;</b> märgendit. <b>Placeholder=“…”</b> atribuuti ei loe välja paljud ekraanilugejad ning enamus veebilehitsejaid kuvavad seda madala kontrastsusega värvides, mida vaegnägijad ei pruugi näha."
     }, {
-        tags: "O des",
+        tags: "O dev",
         content: "Sisendile võib seada piiranguid <b>min=“…”</b>, <b>max=“…”</b>, <b>maxlength=“…”</b> ja <b>steps=“…”</b> atribuutidega. Veelgi täpsema piirangu saab seada mustrikontrolli ehk <b>pattern=“…”</b> atribuudiga, mis võimaldab kontrollida kasutaja sisendi vastavust regulaaravaldisele ning vältida vigu.<pre>&lt;label for=“aeg”&gt;Sisesta aeg (tt:mm)&lt;/label&gt;<br>&lt;input type=&quot;text&quot; id=“aeg” pattern=“[0-9]{2}(:)[0-9]{2}”&gt;</pre>"
     }, {
-        tags: "O dev",
-        content: "Parim võimalus on paigutada <b>&lt;label&gt;</b> elemendid sisestuskastide kohale, sest selline paigutus töötab hästi nii arvutis kui ka mobiilis."
+        tags: "O des",
+        content: "Parim võimalus on paigutada pealkirjad sisestuskastide kohale, sest selline paigutus töötab hästi nii arvutis kui ka mobiilis."
     }, {
         tags: "O dev",
         content: "Kui sisestuskasti funktsioon on visuaalselt piisavalt arusaadav, et ei vaja <b>&lt;label&gt;</b> elementi, tuleb kasutada <b>aria-label=“…”</b> atribuuti, et selgitust saaksid lugeda ainult ekraanilugejad.<figure class='single'><img alt='Otsingukast, mille kõrval on nupp kirjaga Otsi' src='img/otsi.png'></figure><pre>&lt;input type=&quot;text&quot; name=&quot;otsi&quot; aria-label=“Sisest märksõnad, mida soovid otsida”&gt;<br>&lt;button type=“submit”&gt;Otsi&lt;/button&gt;</pre>"
@@ -379,10 +382,10 @@ var contentData = [{
         tags: "O dev",
         content: "<h3>Kohustuslikud väljad</h3><br>Kohustuslikud väljad peavad olema esitatud <b>&lt;input required&gt;</b> märgendiga. Soovituslik on lisada ka atribuut <b>aria-required=“true”</b>, sest kõik tugitehnoloogiad ei pruugi arvestada <b>required</b> atribuuti."
     }, {
-        tags: "A dev",
+        tags: "A des",
         content: "Kohustuslikud väljad peavad olema visuaalselt eristatavad mittekohustuslikest väljadest, kuid mitte ainult värvi abil."
     }, {
-        tags: "A dev",
+        tags: "A des",
         content: "Kui kohustuslikku välja tähistatakse tärniga, peab sellekohane selgitus asuma enne esimest vormivälja. Näiteks “* tähistab kohustuslikku välja”.<div class='examples'><figure class='good'><img alt='Selgitus asub enne välju' src='img/exp_first.png'><figcaption>Selgitus asub enne välju.</figcaption></figure><figure class='bad'><img alt='Selgitus asub peale välju' src='img/exp_last.png'><figcaption>Selgitus asub peale välju.</figcaption></figure></div>"
     }]
 }, {
@@ -427,7 +430,7 @@ var contentData = [{
         tags: "O des",
         content: "Nupul peavad olema selgelt visuaalselt eristatavad fokuseeritud ja aktiivne olek.<pre>button:focus &#123;<br>   border: 2px dashed black;<br>&#125;<br>button:active &#123;<br>   border: 2px solid black;<br>&#125;"
     }, {
-        tags: "AA des",
+        tags: "AA dev",
         content: "Kui nupu sees on teksti asemel ikoon, pilt või üksik täht, tuleb nupule anda atribuut <b>aria-label=“…”</b>, et nupu funktsioon oleks ekraanilugejat kasutavale inimesele mõistetav.<pre>&lt;button aria-label=“Sulge aken”&gt;x&lt;/button&gt;</pre>"
     }]
 }, {
