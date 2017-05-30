@@ -176,7 +176,7 @@ figcaption{
 
 .good:before{
 	content: "";
-	background-image: url(img/good_example.svg);
+	background-image: url(img/good_example.png);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -192,7 +192,7 @@ figcaption{
 
 .bad:before{
 	content: "";
-	background-image: url(img/bad_example.svg);
+	background-image: url(img/bad_example.png);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -232,7 +232,7 @@ figcaption{
 
 .a11yAccordion .a11yAccordionSearchDiv .a11yAccordionSearch {
 	border: 1px solid #b5b5b5;
-    background-image: url(img/search.svg);
+    background-image: url(img/search.png);
     background-position: 1% 35%;
     padding-left: 1.7rem;
     border-radius: 3px;
