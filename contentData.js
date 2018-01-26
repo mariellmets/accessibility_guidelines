@@ -122,7 +122,7 @@ var contentData = [{
         content: "Pealkirjad peavad olema visuaalselt hästi eristatavad - suured ja selged."
     }, {
         tags: "A dev",
-        content: "Pealkirjad tuleb eristada märgenditega <b>&lt;h1&gt;</b> kuni <b>&lt;h6&gt;</b>, mitte ainult kujundusega. Pealkirjadena <b>&lt;h1&gt;</b> kuni <b>&lt;h6&gt;</b> ei tohi esitada teksti, mis pole tegelikult pealkiri."
+        content: "Pealkirjad tuleb eristada märgenditega <b>&lt;h1&gt;</b> kuni <b>&lt;h6&gt;</b>, mitte ainult kujundusega. Pealkirjadena <b>&lt;h1&gt;</b> kuni <b>&lt;h6&gt;</b> ei tohi esitada teksti, mis pole tegelikult pealkiri. (WCAG 1.3.1)"
     }, {
         tags: "AA sis",
         content: "Pealkiri peab olema lühike, kuid sisukas ning kirjeldama sellele pealkirjale järgnevat sisu. (WCAG 2.4.6) Pealkiri peab algama kõige tähtsama ja sisukama sõnaga."
@@ -323,7 +323,7 @@ var contentData = [{
         content: "Eellindistatud heli- ja videofailidele tuleb lisada <b>tekstiline sisukirjeldus</b>, mis asub või millele viidatakse faili vahetus läheduses. Näiteks võib videole lisada tekstilise kirjelduse <b>&lt;track&gt;</b> märgendiga <b>&lt;video&gt;</b> märgendi sees. Ilma helita videole võib tekstiline alternatiivi asemel lisada sama sisu edasi andva <b>helifaili</b>. (WCAG 1.2.1, 1.2.3)<pre>&lt;video controls&gt;<br>   &lt;source src=“video.mp4” srclang=“et” type=“video/mp4”&gt;<br>   &lt;track src=“description.vtt” kind=“descriptions” srclang=“et” label=“Video kirjeldus”&gt;<br>&lt;/video&gt;</pre>"
     }, {
         tags: "AA dev",
-        content: "<b>Reaalajas</b> edastatavale helifailile tuleb lisada <b>sünkroonsed subtiitrid</b> kasutajate jaoks, kes ei kuule või kuulevad halvasti. (1.2.4)"
+        content: "<b>Reaalajas</b> edastatavale helifailile tuleb lisada <b>sünkroonsed subtiitrid</b> kasutajate jaoks, kes ei kuule või kuulevad halvasti. (WCAG 1.2.4)"
     }, {
         tags: "AA dev",
         content: "Eellindistatud videofailile tuleb lisada <b>heliline sisukirjeldus</b>, sest selle kuulamine on nägemispuudega kasutajatele mugavam. (WCAG 1.2.5)"
@@ -350,7 +350,7 @@ var contentData = [{
         content: "Vormielementi fokuseerides või klikkides ei tohi juhtuda midagi ettearvamatut ega muutuda lehe kontekst, välja arvatud juhul, kui kasutajat on sellest eelnevalt teavitatud. (WCAG 3.2.1, 3.2.2)"
     }, {
         tags: "AA dev",
-        content: "Kui vormi ära saatmisel on õiguslikud või finantsilised tagajärjed, peab kasutajal olema võimalik sisestatud info üle vaadata, seda parandada ning vajadusel vormi ärasaatmine tagasi võtta. (3.3.4)"
+        content: "Kui vormi ära saatmisel on õiguslikud või finantsilised tagajärjed, peab kasutajal olema võimalik sisestatud info üle vaadata, seda parandada ning vajadusel vormi ärasaatmine tagasi võtta. (WCAG 3.3.4)"
     }, {
         tags: "O dev",
         content: "<h3>Sisestuskastid</h3><br>Soovitatav on kasutada võimalusel sisestuskasti tüüpe <b>search</b>, <b>email</b>, <b>url</b>, <b>number</b>, <b>tel</b>, <b>range</b>, <b>date</b> või <b>time</b>, et valideerida sisestatud infot automaatselt ning vältida vigu. Mobiilseadmes kuvatakse sisestuskasti tüübi olemasolul ka vastav klaviatuur, mis teeb sisestamise mugavamaks. Sisestuskasti tüübid pole hetkel veel kõigis veebilehitsejates toetatud.<pre>&lt;label for=“vahemik”&gt;Määra maksimaalne hind: &lt;/label&gt;<br>&lt;input type=&quot;range&quot; name=&quot;vahemik&quot; id=&quot;vahemik&quot; min=&quot;0&quot; max=&quot;100&quot; step=“10”&gt;</pre><div class='examples'><figure class='good'><img alt='Kasutajale kuvatakse numbriklaviatuur.' src='img/tel_good.png'><figcaption>Välja tüübiks on 'tel'.</figcaption></figure><figure class='bad'><img alt='Kasutajale kuvatakse täheklaviatuur.' src='img/tel_bad.png'><figcaption>Välja tüübiks on 'text'.</figcaption></figure></div>"
@@ -368,7 +368,7 @@ var contentData = [{
         content: "Kui sisestuskasti funktsioon on visuaalselt piisavalt arusaadav, et ei vaja <b>&lt;label&gt;</b> elementi, tuleb kasutada <b>aria-label=“…”</b> atribuuti, et selgitust saaksid lugeda ainult ekraanilugejad.<figure class='single'><img alt='Otsingukast, mille kõrval on nupp kirjaga Otsi' src='img/otsi.png'></figure><pre>&lt;input type=&quot;text&quot; name=&quot;otsi&quot; aria-label=“Sisest märksõnad, mida soovid otsida”&gt;<br>&lt;button type=“submit”&gt;Otsi&lt;/button&gt;</pre>"
     }, {
         tags: "A dev",
-        content: "<h3>Raadionupud</h3><br>Kokkukuuluvatele raadionuppudele tuleb anda ühine name=“…” atribuut, et korraga saaks valida ainult ühe raadionupu.<pre>&lt;input type=&quot;radio&quot; name=&quot;contact&quot; id=&quot;email&quot; value=&quot;email&quot;&gt;<br>&lt;label for=“email”&gt;E-post&lt;/label&gt;<br>&lt;input type=&quot;radio&quot; name=&quot;contact&quot; id=&quot;phone&quot; value=&quot;phone&quot;&gt;<br>&lt;label for=“phone&quot;&gt;Telefon&lt;/label&gt;</pre>"
+        content: "<h3>Raadionupud</h3><br>Kokkukuuluvatele raadionuppudele tuleb anda ühine name=“…” atribuut, et korraga saaks valida ainult ühe raadionupu. (WCAG 4.1.2)<pre>&lt;input type=&quot;radio&quot; name=&quot;contact&quot; id=&quot;email&quot; value=&quot;email&quot;&gt;<br>&lt;label for=“email”&gt;E-post&lt;/label&gt;<br>&lt;input type=&quot;radio&quot; name=&quot;contact&quot; id=&quot;phone&quot; value=&quot;phone&quot;&gt;<br>&lt;label for=“phone&quot;&gt;Telefon&lt;/label&gt;</pre>"
     }, {
         tags: "O des",
         content: "<h3>Valikukastid</h3><br>Kasutajale ei tohiks näidata korraga liiga palju valikuid ja võimalusi, sest see võib olla segadusseajav ja frustreeriv. Valikud tuleks jagada väiksemateks gruppideks. Pikast valikute nimekirjast võiks pakkuda otsimisvõimalust."
@@ -388,8 +388,8 @@ var contentData = [{
 }, {
     title: "Veateated",
     sections: [{
-        tags: "A dev",
-        content: "Kasutajat tuleb teavitada, kui tekkis viga ning ka siis, kui kõik õnnestus."
+        tags: "O dev",
+        content: "Kasutajat tuleks teavitada, kui tekkis viga ning ka siis, kui kõik õnnestus."
     }, {
         tags: "A des",
         content: "Vigaselt täidetud väljad või täitmata jäetud kohutuslikud väljad peavad olema visuaalselt eristatavad. (WCAG 3.3.1) Vigaseid välju ei tohi eristada ainult värviga. (WCAG 1.4.1)<div class='examples'><figure class='good'><img alt='Iga välja järel on kas korrektne või vigane ikoon' src='img/input_icon.png'><figcaption>Lisaks värvile on vigane väli tähistatud ka ikooniga</figcaption></figure><figure class='bad'><img alt='Korrektselt täidetud väljade piirjoon on roheline ja vigaste väljade piirjoon punane' src='img/input.png'><figcaption>Vigane väli on tähistatud ainult värviga</figcaption></figure></div>"
@@ -401,7 +401,7 @@ var contentData = [{
         content: "Vigaselt täidetud välja juures peab olema tekstiline veateade. (WCAG 3.3.1) Veateatest peab olema selgelt arusaadav, <b>miks viga tekkis</b> ja <b>kuidas seda parandada</b>. Peab olema kirjas, kas probleem on <b>ajutine või püsiv</b> ning kas kasutaja saab probleemi <b>ise</b> lahendada või tegeleb sellega <b>teenusepakkuja</b> (sellisel juhul peaks lisama teenusepakkuja või kasutajatoe kontakti). (WCAG 3.3.3)"
     }, {
         tags: "A des",
-        content: "Veateade tuleb kuvada võimalikult lähedal kohale, kus viga tekkis.<figure class='single'><img alt='Veateade kuvatakse vastava sisestuskasti juures.' src='img/error_msg.png'></figure>"
+        content: "Veateade tuleb kuvada võimalikult lähedal kohale, kus viga tekkis. (WCAG 1.3.1)<figure class='single'><img alt='Veateade kuvatakse vastava sisestuskasti juures.' src='img/error_msg.png'></figure>"
     }, {
         tags: "O des",
         content: "Kui veateade kuvatakse eraldi lehel, peab seal olema vähemalt üks järgmistest: <b>“Tagasi”</b> link eelmisele lehele (käitub nagu veebilehitseja “Tagasi” nupp), <b>“Proovi uuesti”</b> link (käitub nagu veebilehitseja “Värskenda” nupp) või <b>link avalehele</b> saamiseks."
