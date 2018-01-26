@@ -218,16 +218,16 @@ var contentData = [{
     title: "Lingid",
     sections: [{
         tags: "A des",
-        content: "Lingid peavad olema muust tekstist visuaalselt eristatavad, näiteks allajoonitud."
+        content: "Lingid peavad olema muust tekstist visuaalselt eristatavad ning mitte ainult teist värvi, vaid näiteks allajoonitud, paksemad või suuremas kirjas. (WCAG 1.4.1)"
     }, {
         tags: "O des",
         content: "<b>Külastatud</b> ja <b>külastamata</b> lingid peaksid olema visuaalselt eristatavad."
     }, {
         tags: "AA des",
-        content: "<b>Fokuseeritud link</b> peab olema teistest visuaalselt eristatav."
+        content: "<b>Fokuseeritud link</b> peab olema teistest visuaalselt eristatav. (WCAG 2.4.7)"
     }, {
         tags: "A sis",
-        content: "Lingi tekstist (ning seda ümbristevast kontekstist) peab saama selgelt aru, mis sellele vajutades juhtub. (WCAG 2.4.4) Lingi tekst peaks algama kõige tähtsama ja sisukama sõnaga. Lingi tekst ei tohiks olla lihtsalt <b>“Kliki siia”</b> või <b>“Rohkem”</b> ega lihtsalt <b>URL</b>, sest ekraanilugeja loeb selle ette täht haaval. Lingi tekst ei tohiks sisaldada sõna <b>“link”</b>, sest ekraanilugejad ütlevad, et tegu on lingiga. Nägijate jaoks peavad lingid olema tekstist visuaalselt eristatavad."
+        content: "Lingi tekstist (ning seda ümbristevast kontekstist) peab saama selgelt aru, mis sellele vajutades juhtub. (WCAG 2.4.4) Lingi tekst peaks algama kõige tähtsama ja sisukama sõnaga. Lingi tekst ei tohiks olla lihtsalt <b>“Kliki siia”</b> või <b>“Rohkem”</b> ega lihtsalt <b>URL</b>, sest ekraanilugeja loeb selle ette täht haaval. Lingi tekst ei tohiks sisaldada sõna <b>“link”</b>, sest ekraanilugejad ütlevad, et tegu on lingiga."
     }, {
         tags: "O dev",
         content: "Sama tekstiga lingid ei tohi viia erinevatele lehtedele."
@@ -263,13 +263,13 @@ var contentData = [{
         content: "<b>Fookuses olev element</b> peab olema selgelt visuaalselt eristatav, et klaviatuuriga navigeerijatel oleks selge, mille juures nad lehel asuvad. (WCAG 2.4.7)<figure><img alt='Menüü, milles üks element on fokuseeritud' class='single' src='img/menu_focus.jpg'></figure>"
     }, {
         tags: "A des",
-        content: "<b>Aktiivne element</b> (näiteks menüüpunkt, mis viitab lehele, kus hetkel asutakse) peab olema selgelt eristatav ka värve nägemata.<figure><img alt='Menüü, milles üks element on aktiivne' class='single' src='img/menu.jpg'></figure>"
+        content: "<b>Aktiivne element</b> (näiteks menüüpunkt, mis viitab lehele, kus hetkel asutakse) peab olema selgelt eristatav ka värve nägemata. (WCAG 1.4.1)<figure><img alt='Menüü, milles üks element on aktiivne' class='single' src='img/menu.jpg'></figure>"
     }, {
         tags: "AA des",
         content: "Esiplaani (teksti või kujutise) ja tagaplaani (tausta) värvid peavad olema piisavalt erinevad, et nende <b>kontrastsus</b> oleks minimaalselt: kui font on kuni 18pt ja regular - 4,5:1 ning kui font on vähemalt 18pt ja regular või vähemalt 14pt ja bold - 3:1. Erandiks on kiri logol ja dekoratsioonina kasutatav kiri. Värvide kontrastsust saab kontrollida nende HEX koodide järgi näiteks <a href='http://webaim.org/resources/contrastchecker/' target='_blank'>WebAIMi kontrolltööriistaga</a>. (WCAG 1.4.3)<br><div class='examples'><figure class='good'><img alt='Must tekst valgel taustal' src='img/high_contrast.png'><figcaption>Kõrge kontrastsus 14.79:1</figcaption></figure><figure class='bad'><img alt='Helehall tekst valgel taustal' src='img/low_contrast.png'><figcaption>Liiga madal kontrastsus 2.21:1</figcaption></figure></div>"
     }, {
         tags: "O des",
-        content: "Kui lehele on sisseehitatud kontrastsuse muutmise võimalus, peaks see asuma päise keskosas, et see lehe suurendamisel ekraanilt ära ei kaoks."
+        content: "Kui lehele on sisseehitatud kontrastsuse muutmise võimalus, peaks see asuma päise ülemises vasakus nurgas, et see lehe suurendamisel ekraanilt ära ei kaoks."
     }]
 }, {
     title: "Pildid",
@@ -283,8 +283,8 @@ var contentData = [{
         tags: "O des",
         content: "Vältida tuleb <b>hüperpilte</b> (<i>image map</i>), mille eri osadele vajutades avanevad erinevad lingid."
     }, {
-        tags: "O dev",
-        content: "Kui kasutatakse <b>animeeritud galeriid</b> (nt karusell), peab kasutajal olema võimalik animatsiooni peatada. Galerii peab olema kasutatav klaviatuuri abil. Aktiivne galerii element peab olema eristatav ka tugitehnoloogiatega – sellele võib lisada visuaalselt peidetud teksti <b>&lt;div aria-live=”polite”&gt;Esimene pilt kuuest&lt;/div&gt;</b>."
+        tags: "A dev",
+        content: "Kui kasutatakse <b>animeeritud galeriid</b> (nt karusell), peab kasutajal olema võimalik animatsiooni peatada. (WCAG 2.2.2) Galerii peab olema kasutatav klaviatuuri abil. (WCAG 2.1.1) Aktiivne galerii element peab olema eristatav ka tugitehnoloogiatega – sellele võib lisada visuaalselt peidetud teksti <b>&lt;div aria-live=”polite”&gt;Esimene pilt kuuest&lt;/div&gt;</b>. (WCAG 1.3.3)"
     }, {
         tags: "A dev",
         content: "<h3>Pilt, mis ei kanna edasi vajalikku infot</h3><br>Kui tegu on illustreeriva pildiga, mida informatsiooni kätte saamiseks näha pole vaja, tuleb lisada pildile tühi <b>alt=“”</b> atribuut, sest siis jätavad ekraanilugejad selle pildi vahele. Kui alt atribuuti ei lisata, loeb ekraanilugeja ette pildi faili nime. Illustreerivate piltide puhul tuleks kasutada CSS-i <b>background</b>, <b>:before</b> või <b>:after</b> reegleid HTML-i <b>&lt;img&gt;</b> märgendite asemel. (WCAG 1.1.1)"
@@ -301,11 +301,11 @@ var contentData = [{
         tags: "O dev",
         content: "<h3>Illustreeriv ikoon</h3><br>Kui ikoon on pelgalt illustreeriv ega kanna endas lisainformatsiooni, tuleks see ekraanilugejate eest peita atribuudiga <b>aria-hidden=”true”</b>. Antud atribuut ei mõjuta elemendi visuaalset nähtavust, vaid võimaldab ekraanilugejatel antud elemendi vahele jätta.<figure class='single'><img alt='Lisaks ikoonile on olemas sama infot edasi andev tekst' src='img/help.png'></figure><pre>&lt;a href=“…”&gt;<br>   &lt;i class=“icon-help” aria-hidden=“true”&gt;&lt;/i&gt;Help<br>&lt;/a&gt;</pre>"
     }, {
-        tags: "O dev",
-        content: "<h3>Informatiivne ikoon</h3><br>Kui ikoon annab edasi tähtsat informatsiooni, mida tekstiliselt kirja ei taheta panna, tuleks see ekraanilugejate eest peita atribuudiga <b>aria-hidden=”true”</b> ning lisada sama infot edasi andev tekstiline kirjeldus, mida visuaalselt pole näha, aga mida ekraanilugejad saavad lugeda. Ikoonile võib lisada ka atribuudi <b>title=“…”</b>, mis annab nägijatele lisainformatsiooni, kui kursoriga elemendi peale liikuda.<figure class='single'><img alt='Infot annab edasi ainult ikoon' src='img/phone.png'></figure><pre>&lt;i class=“icon-phone” aria-hidden=“true” title=“Phone number”&gt;&lt;/i&gt;<br>&lt;span class=“invisible”&gt;Phone number&lt;/span&gt;<br><br>.invisible&#123;<br>   position: absolute !important;<br>   height: 1px; <br>   width: 1px; <br>   overflow: hidden;<br>   clip: rect(1px, 1px, 1px, 1px);<br>&#125;<br></pre>"
+        tags: "A dev",
+        content: "<h3>Informatiivne ikoon</h3><br>Kui ikoon annab edasi tähtsat informatsiooni, mida tekstiliselt kirja ei taheta panna, tuleks see ekraanilugejate eest peita atribuudiga <b>aria-hidden=”true”</b> ning lisada sama infot edasi andev tekstiline kirjeldus, mida visuaalselt pole näha, aga mida ekraanilugejad saavad lugeda. Ikoonile võib lisada ka atribuudi <b>title=“…”</b>, mis annab nägijatele lisainformatsiooni, kui kursoriga elemendi peale liikuda. (WCAG 1.3.3)<figure class='single'><img alt='Infot annab edasi ainult ikoon' src='img/phone.png'></figure><pre>&lt;i class=“icon-phone” aria-hidden=“true” title=“Phone number”&gt;&lt;/i&gt;<br>&lt;span class=“invisible”&gt;Phone number&lt;/span&gt;<br><br>.invisible&#123;<br>   position: absolute !important;<br>   height: 1px; <br>   width: 1px; <br>   overflow: hidden;<br>   clip: rect(1px, 1px, 1px, 1px);<br>&#125;<br></pre>"
     }, {
-        tags: "O dev",
-        content: "<h3>Ikoon lingi teksti asemel</h3><br>Kui ikooniga on tähistatud linki, tuleks lingile lisada atribuut <b>aria-label=“…”</b>. Antud atribuut võimaldab ekraanilugejatel kasutajale lisainformatsiooni lugeda. Ikoonile võib lisada ka atribuudi <b>title=“…”</b>, mis annab nägijatele lisainformatsiooni, kui kursoriga elemendi peale liikuda.<figure class='single'><img alt='Ikoon näitab, kuhu link viib' src='img/bag.png'></figure><pre>&lt;a class=“button” href=“…” aria-label=“Vaata ostukorvi”&gt;<br>   &lt;i class=“icon-bag” aria-hidden=“true” title=“Ostukorv”&gt;&lt;/i&gt;<br>&lt;/a&gt;<br></pre>"
+        tags: "A dev",
+        content: "<h3>Ikoon lingi teksti asemel</h3><br>Kui ikooniga on tähistatud linki, tuleks lingile lisada atribuut <b>aria-label=“…”</b>. Antud atribuut võimaldab ekraanilugejatel kasutajale lisainformatsiooni lugeda. Ikoonile võib lisada ka atribuudi <b>title=“…”</b>, mis annab nägijatele lisainformatsiooni, kui kursoriga elemendi peale liikuda. (WCAG 1.3.3)<figure class='single'><img alt='Ikoon näitab, kuhu link viib' src='img/bag.png'></figure><pre>&lt;a class=“button” href=“…” aria-label=“Vaata ostukorvi”&gt;<br>   &lt;i class=“icon-bag” aria-hidden=“true” title=“Ostukorv”&gt;&lt;/i&gt;<br>&lt;/a&gt;<br></pre>"
     }]
 }, {
     title: "Heli ja video",
@@ -383,7 +383,7 @@ var contentData = [{
         content: "Kohustuslikud väljad peavad olema visuaalselt eristatavad mittekohustuslikest väljadest, kuid mitte ainult värvi abil. (WCAG 1.4.1)"
     }, {
         tags: "A des",
-        content: "Kui kohustuslikku välja tähistatakse tärniga, peab sellekohane selgitus asuma enne esimest vormivälja. Näiteks “* tähistab kohustuslikku välja”.<div class='examples'><figure class='good'><img alt='Selgitus asub enne välju' src='img/exp_first.png'><figcaption>Selgitus asub enne välju.</figcaption></figure><figure class='bad'><img alt='Selgitus asub peale välju' src='img/exp_last.png'><figcaption>Selgitus asub peale välju.</figcaption></figure></div>"
+        content: "Kui kohustuslikku välja tähistatakse tärniga, peab sellekohane selgitus asuma enne esimest vormivälja. Näiteks “* tähistab kohustuslikku välja”. (WCAG 3.3.2)<div class='examples'><figure class='good'><img alt='Selgitus asub enne välju' src='img/exp_first.png'><figcaption>Selgitus asub enne välju.</figcaption></figure><figure class='bad'><img alt='Selgitus asub peale välju' src='img/exp_last.png'><figcaption>Selgitus asub peale välju.</figcaption></figure></div>"
     }]
 }, {
     title: "Veateated",
@@ -412,8 +412,8 @@ var contentData = [{
         tags: "AA des",
         content: "Nupud ja muud funktsionalsed elemendid peavad kogu lehe ulatuses olema sarnased ja äratuntavad. (WCAG 3.2.4)"
     }, {
-        tags: "M des",
-        content: "Nupud peavad olema vähemalt <b>40px</b> suurused ja piisavalt suurte vahedega, et neid oleks puutetundlikul ekraanil mugav vajutada."
+        tags: "AA des",
+        content: "Nupud peavad olema vähemalt <b>44 x 22</b> CSS piksli suurused ja piisavalt suurte vahedega, et neid oleks puutetundlikul ekraanil mugav vajutada. (WCAG 2.1 2.5.3)"
     }, {
         tags: "M des",
         content: "Mobiilivaates peaksid nupud asuma võimalikult ekraani keskel."
@@ -424,11 +424,11 @@ var contentData = [{
         tags: "O dev",
         content: "Nupp peab olema vajutatav kogu oma ulatuses, mitte ainult nupul olev tekst.<div class='examples'><figure class='good'><img alt='Korrektne nupp' src='img/curs.png'><figcaption>Kogu nupu pind on klikitav.</figcaption></figure><figure class='bad'><img alt='Vigane nupp' src='img/No_curs.png'><figcaption>Ainult tekst on klikitav.</figcaption></figure></div>"
     }, {
-        tags: "O des",
-        content: "Nupul peavad olema selgelt visuaalselt eristatavad fokuseeritud ja aktiivne olek.<pre>button:focus &#123;<br>   border: 2px dashed black;<br>&#125;<br>button:active &#123;<br>   border: 2px solid black;<br>&#125;"
+        tags: "AA des",
+        content: "Nupul peavad olema selgelt visuaalselt eristatavad fokuseeritud (WCAG 2.4.7) ja aktiivne olek.<pre>button:focus &#123;<br>   border: 2px dashed black;<br>&#125;<br>button:active &#123;<br>   border: 2px solid black;<br>&#125;"
     }, {
         tags: "AA dev",
-        content: "Kui nupu sees on teksti asemel ikoon, pilt või üksik täht, tuleb nupule anda atribuut <b>aria-label=“…”</b>, et nupu funktsioon oleks ekraanilugejat kasutavale inimesele mõistetav.<pre>&lt;button aria-label=“Sulge aken”&gt;x&lt;/button&gt;</pre>"
+        content: "Kui nupu sees on teksti asemel ikoon, pilt või üksik täht, tuleb nupule anda atribuut <b>aria-label=“…”</b>, et nupu funktsioon oleks ekraanilugejat kasutavale inimesele mõistetav. (WCAG 1.3.3)<pre>&lt;button aria-label=“Sulge aken”&gt;x&lt;/button&gt;</pre>"
     }]
 }, {
     title: "Tabelid",
@@ -437,10 +437,10 @@ var contentData = [{
         content: "Tabeleid ei tohi kasutada lehe sisu paigutamiseks ja kujundamiseks."
     }, {
         tags: "A dev",
-        content: "Tabel tuleb esitada kasutades <b>&lt;table&gt;</b>, <b>&lt;thead&gt;</b> (päiselahtrite grupeerimiseks), <b>&lt;tbody&gt;</b> (sisuosa eraldamiseks), <b>&lt;tfoot&gt;</b> (kokkuvõtvate lahtrite grupeerimiseks), <b>&lt;tr&gt;</b>, <b>&lt;td&gt;</b>, <b>&lt;th&gt;</b> märgendei."
+        content: "Tabel tuleks esitada kasutades <b>&lt;table&gt;</b>, <b>&lt;thead&gt;</b> (päiselahtrite grupeerimiseks), <b>&lt;tbody&gt;</b> (sisuosa eraldamiseks), <b>&lt;tfoot&gt;</b> (kokkuvõtvate lahtrite grupeerimiseks), <b>&lt;tr&gt;</b>, <b>&lt;td&gt;</b>, <b>&lt;th&gt;</b> märgendeid. (WCAG 1.3.1)"
     }, {
         tags: "A dev",
-        content: "Tabelil peab olema päis. Horisontaalse päise lahtrid tuleb märkida <b>&lt;th scope=“col”&gt;</b> ja vertikaalse päise lahtrid <b>&lt;th scope=“row”&gt;</b>."
+        content: "Tabelil peab olema päis. Horisontaalse päise lahtrid tuleb märkida <b>&lt;th scope=“col”&gt;</b> ja vertikaalse päise lahtrid <b>&lt;th scope=“row”&gt;</b>. (WCAG 1.3.1)"
     }, {
         tags: "O dev",
         content: "Tabelile tuleks anda pealkiri <b>&lt;caption&gt;</b> märgendiga."
