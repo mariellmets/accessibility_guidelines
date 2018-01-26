@@ -4,7 +4,7 @@ var contentData = [{
         tags: "O dev",
         content: "Lehe aadress tuleb hoida võimalikult lühikesena, sest mobiilseadmetel veebilehitsejasse aadressi trükkimine on ebamugav. Lühike aadress, näiteks <b>firma.ee</b> peab suunama lehele <b>http://www.firma.ee/index.html</b> ja <b>firma.ee/leht</b> lehele <b>http://www.firma.ee/leht.html</b>. Lehe aadress peab avama alati sama temaatikaga lehe, olenemata seadmest."
     }, {
-        tags: "M dev",
+        tags: "AA dev",
         content: "Veebileht peab olema kasutatav vähemalt 320 CSS piksli laiuses puutetundlikes mobiilseadmetes. (WCAG 2.1 1.4.10) Soovitatav on disainida leht kohanduvalt (<i>responsive</i>) ja esmalt mobiilile (<i>mobile first</i>). Lehte peab olema võimalik mobiilis suurendada – ei tohiks kasutada <b>&lt;meta&gt;</b> märgendi <b>user-scalable=”no”</b> atribuuti. (WCAG 1.4.4)"
     }, {
         tags: "O dev",
@@ -34,10 +34,10 @@ var contentData = [{
         tags: "A dev",
         content: "Ettevaatlik tuleb olla <b>robotilõksude</b> kasutamises, sest CAPTCHA pildid on ekraanilugejaga loetamatud ning nupud ja lohistamisribad ei luba tihti turvakaalutlustel hiireklõpsu simuleerimist olles seega samuti ekraanilugejaga kasutamatud. Parem variant on robotilõksuna kasutada lihtsaid, kuid vastamisel inimlikku loogikat vajavaid küsimusi, näiteks 'Kas päike on kollane või sinine?' (WCAG 1.1.1)<br><div class='examples'><figure class='good'><img alt='Robotilõks küsib kasutajalt, kui palju on 2 + 2' src='img/logical.jpg'><figcaption>Kasutajalt küsitakse loogiline küsimus</figcaption></figure><figure class='bad'><img alt='Robotilõks palub kasutajal lohistada nupp ühest kohast teise' src='img/drag.jpg'><figcaption>Kasutajat sunnitakse lohistama</figcaption></figure></div>"
     }, {
-        tags: "O dev",
+        tags: "AA dev",
         content: "Kerimist peaks lubama vaid ühes suunas (ülevalt-alla või vasakult-paremale). Erandiks on näiteks galeriid. (WCAG 2.1 1.4.10)"
     }, {
-        tags: "O dev",
+        tags: "A dev",
         content: "Leht ei tohi ennast <b>automaatselt värskendada</b>, sest see võib kustutada kasutaja pooleli jäänud töö ning kasutada piiratud mobiilse interneti mahtu. (WCAG 2.2.1)"
     }, {
         tags: "A dev",
