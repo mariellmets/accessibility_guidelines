@@ -5,7 +5,7 @@ var contentData = [{
         content: "Lehe aadress tuleb hoida võimalikult lühikesena, sest mobiilseadmetel veebilehitsejasse aadressi trükkimine on ebamugav. Lühike aadress, näiteks <b>firma.ee</b> peab suunama lehele <b>http://www.firma.ee/index.html</b> ja <b>firma.ee/leht</b> lehele <b>http://www.firma.ee/leht.html</b>. Lehe aadress peab avama alati sama temaatikaga lehe, olenemata seadmest."
     }, {
         tags: "M dev",
-        content: "Veebileht peab olema kasutatav puutetundlikes mobiilseadmetes. Soovitatav on disainida leht kohanduvalt (<i>responsive</i>) ja esmalt mobiilile (<i>mobile first</i>). Lehte peab olema võimalik mobiilis suurendada – ei tohiks kasutada <b>&lt;meta&gt;</b> märgendi <b>user-scalable=”no”</b> atribuuti."
+        content: "Veebileht peab olema kasutatav vähemalt 320 CSS piksli laiuses puutetundlikes mobiilseadmetes. (WCAG 2.1 1.4.10) Soovitatav on disainida leht kohanduvalt (<i>responsive</i>) ja esmalt mobiilile (<i>mobile first</i>). Lehte peab olema võimalik mobiilis suurendada – ei tohiks kasutada <b>&lt;meta&gt;</b> märgendi <b>user-scalable=”no”</b> atribuuti. (WCAG 1.4.4)"
     }, {
         tags: "O dev",
         content: "Soovitatav on kasutada HTML5 struktuurielemente: <b>&lt;article&gt;</b> suure iseseisva sisuosa jaoks, <b>&lt;section&gt;</b> sektsioonide eristamiseks, <b>&lt;header&gt;</b> päise esitamiseks, <b>&lt;main&gt;</b> põhisisu märkimiseks, <b>&lt;footer&gt;</b> jaluse märkimiseks, <b>&lt;nav&gt;</b> menüü jaoks, <b>&lt;aside&gt;</b> külgriba jaoks, <b>&lt;address&gt;</b> kontaktinfo (soovitatavalt e-posti aadressi) jaoks. Elementidele tuleks lisada pealkiri <b>aria-label=”...”</b> atribuudiga või kirjutada vastava pealkirja id <b>aria-labelledby=”...”</b> atribuuti.<figure><img alt='Näide struktuurielementide kasutamisest' class='single' src='img/struktuurielemendid.jpg'></figure>"
@@ -14,7 +14,7 @@ var contentData = [{
         content: "Vältida tuleks raame nagu <b>&lt;frameset&gt;</b> või <b>&lt;iframe&gt;</b>, sest paljud mobiilseadmed ei toeta neid ning nad on üldiselt vananenud ja problemaatilised. Kui siiski kasutatakse raame, tuleb neile anda kirjeldavad <b>title=”...”</b> atribuudid."
     }, {
         tags: "A dev",
-        content: "Kujundus tuleks luua kasutades laadilehti (<i>stylesheets</i>), mitte <b>style=“…”</b> atribuute. Sisu peab olema kättesaadav ja loogilises järjekorras ka laadilehti kasutamata."
+        content: "Kujundus tuleks luua kasutades laadilehti (<i>stylesheets</i>), mitte <b>style=“…”</b> atribuute. Sisu peab olema kättesaadav ja loogilises järjekorras ka laadilehti kasutamata. (WCAG 1.3.2)"
     }, {
         tags: "O dev",
         content: "Peidetud elemendile tuleb anda CSS-is nii <b>display: none</b> kui ka <b>visibility: hidden</b> stiilid, et ükski ekraanilugeja ei näeks peidetud elementi.<pre>.hidden &#123;<br>   display: none;<br>   visibility: hidden;<br>&#125;</pre>"
@@ -23,7 +23,7 @@ var contentData = [{
         content: "Elementide suurused tuleb määrata relatiivsetes ühikutes nagu <b>rem</b> ja <b>em</b>. Eranditeks on veerised, raamid ja vooderdus (<i>margin</i>, <i>border</i> ja <i>padding</i>) ning pildi suurused, mis võivad olla määratud pikslites."
     }, {
         tags: "A dev",
-        content: "Lehel peab olema võimalik teha kõiki tegevusi (välja arvatud nt joonistamine) kasutades <b>ainult klaviatuuri</b> (<i>tab</i> klahvi või nooleklahve) (WCAG 2.1.1) ja ka <b>ainult hiirt</b>. Lehel ei tohi leiduda <b>klaviatuurilõkse</b> ehk olukordi, kus klaviatuuriga mingi funktsiooni juurde minna on võimalik, kuid sealt ära enam mitte. (WCAG 2.1.2)"
+        content: "Lehel peab olema võimalik teha kõiki tegevusi (välja arvatud nt joonistamine) kasutades <b>ainult klaviatuuri</b> - <i>tab</i> klahvi või nooleklahve - (WCAG 2.1.1) ja ka <b>ainult hiirt</b>. Lehel ei tohi leiduda <b>klaviatuurilõkse</b> ehk olukordi, kus klaviatuuriga mingi funktsiooni juurde minna on võimalik, kuid sealt ära enam mitte. (WCAG 2.1.2)"
     }, {
         tags: "O dev",
         content: "Kasutajalt ei tohi nõuda <b>hõljutamist</b> (<i>hover</i>), <b>lohistamist</b> (<i>drag</i>) ega <b>libistamist</b> (<i>slide</i>), vaid peab lubama ka tavalist <b>hiireklõpsu</b>. Lohistamise asemel peab lubama kopeerimist ja kleepimist."
@@ -35,16 +35,16 @@ var contentData = [{
         content: "Ettevaatlik tuleb olla <b>robotilõksude</b> kasutamises, sest CAPTCHA pildid on ekraanilugejaga loetamatud ning nupud ja lohistamisribad ei luba tihti turvakaalutlustel hiireklõpsu simuleerimist olles seega samuti ekraanilugejaga kasutamatud. Parem variant on robotilõksuna kasutada lihtsaid, kuid vastamisel inimlikku loogikat vajavaid küsimusi, näiteks 'Kas päike on kollane või sinine?' (WCAG 1.1.1)<br><div class='examples'><figure class='good'><img alt='Robotilõks küsib kasutajalt, kui palju on 2 + 2' src='img/logical.jpg'><figcaption>Kasutajalt küsitakse loogiline küsimus</figcaption></figure><figure class='bad'><img alt='Robotilõks palub kasutajal lohistada nupp ühest kohast teise' src='img/drag.jpg'><figcaption>Kasutajat sunnitakse lohistama</figcaption></figure></div>"
     }, {
         tags: "O dev",
-        content: "Kerimist peaks lubama vaid ühes suunas (ülevalt-alla või vasakult-paremale). Erandiks on näiteks galeriid."
+        content: "Kerimist peaks lubama vaid ühes suunas (ülevalt-alla või vasakult-paremale). Erandiks on näiteks galeriid. (WCAG 2.1 1.4.10)"
     }, {
         tags: "O dev",
-        content: "Leht ei tohi ennast <b>automaatselt värskendada</b>, sest see võib kustutada kasutaja pooleli jäänud töö (WCAG 2.2.1) ning kasutada piiratud mobiilse interneti mahtu."
+        content: "Leht ei tohi ennast <b>automaatselt värskendada</b>, sest see võib kustutada kasutaja pooleli jäänud töö ning kasutada piiratud mobiilse interneti mahtu. (WCAG 2.2.1)"
     }, {
         tags: "A dev",
         content: "Kui lehel on <b>ajalimiit</b> (lühem kui 20 tundi), peab kasutajat sellest hoiatama, lubama limiidi välja lülitamist või pikendamist (selleks peab andma vähemalt 20 sekundit aega). (WCAG 2.2.1)"
     }, {
-        tags: "O dev",
-        content: "Pole soovitatav kasutada <b>animatsioone</b>, kus info tekib ja kaob, sest kasutaja ei pruugi jõuda piiratud ajaga infot kätte saada. Kui veebilehe sisu laetakse osade kaupa, võib olla ekraanilugejatel keeruline lugemisjärge hoida."
+        tags: "A dev",
+        content: "Pole soovitatav kasutada <b>animatsioone</b>, kus info tekib ja kaob, sest kasutaja ei pruugi jõuda piiratud ajaga infot kätte saada. Kui neid siiski kasutatakse, peab olema võimalik neid välja lülitada. (WCAG 2.2.1) Kui veebilehe sisu laetakse osade kaupa, võib olla ekraanilugejatel keeruline lugemisjärge hoida. (WCAG 1.3.2)"
     }, {
         tags: "O dev",
         content: "Vältida tuleks <b>hüpikaknaid</b> ja <b>modaale</b>. Kui neid siiski kasutatakse, peab olema selgelt arusaadav, kuidas neid sulgeda."
@@ -56,7 +56,7 @@ var contentData = [{
         content: "Miski veebilehel ei tohi miski <b>sähvida</b> rohkem kui 3 korda sekundis, sest see võib tekitada haigushooge. (WCAG 2.3.1) Sähvimist peab saama välja lülitada. (WCAG 2.2.2)"
     }, {
         tags: "A dev",
-        content: "Elementi fokuseerides ei tohi juhtuda midagi ettearvamatut – fookus ei tohi minna mõnele teisele elemendile, vorm ei tohi ennast ise ära saata jne."
+        content: "Elementi fokuseerides ei tohi juhtuda midagi ettearvamatut – fookus ei tohi minna mõnele teisele elemendile, vorm ei tohi ennast ise ära saata jne. (WCAG 3.2.1)"
     }, {
         tags: "A dev",
         content: "Märgistuskeeles kirjutatud kood peab valideeruma formaalseid validaatoreid (näiteks <a href='http://validator.w3.org' target='_blank'>W3 validaator</a>) kasutades. (WCAG 4.1.1)"
@@ -68,7 +68,7 @@ var contentData = [{
         content: "Lehe keel peab olema märgitud ISO 639-1 koodiga <b>&lt;html&gt;</b> elemendi <b>lang=“…”</b> atribuudis, näiteks <b>&lt;html lang=”et”&gt;</b>. (WCAG 3.1.1)"
     }, {
         tags: "A dev",
-        content: "Igal lehel peal olema informatiivne ja lehte kirjeldav tiitel <b>&lt;title&gt;</b> märgendina.<br> (WCAG 2.4.2)<pre>&lt;head&gt;<br>   &lt;title&gt;<br>      Kontakt - Firmanimi OÜ<br>   &lt;/title&gt;<br>&lt;/head&gt;</pre>"
+        content: "Igal lehel peal olema informatiivne ja lehte kirjeldav tiitel <b>&lt;title&gt;</b> märgendina. (WCAG 2.4.2)<pre>&lt;head&gt;<br>   &lt;title&gt;<br>      Kontakt - Firmanimi OÜ<br>   &lt;/title&gt;<br>&lt;/head&gt;</pre>"
     }, {
         tags: "O dev",
         content: "Mõistlik on alustada tiitlit alamlehe nimega. Nt: “<b>Kontakt | Firmanimi OÜ</b>” mitte “Firmanimi OÜ | Kontakt”, sest kui vahelehed on kitsad, pole viimasel juhul võimalik alamlehti üksteisest eristada.<br><div class='examples'><figure class='good'><img alt='Alamlehtede tiitlid algavad alamlehe nimega' src='img/tabs.png'><figcaption>Vahelehed algavad alamlehe nimega</figcaption></figure><figure class='bad'><img alt='Alamlehe tiitlid algavad lehe nimega' src='img/bad_tabs.png'><figcaption>Kõik vahelehed algavad sama sõnaga</figcaption></figure></div>"
@@ -80,13 +80,10 @@ var contentData = [{
     title: "Navigatsioon",
     sections: [{
         tags: "AA des",
-        content: "Navigatsioon peab olema lihtne ja ühtne üle terve veebilehe. "
+        content: "Navigatsioon peab olema lihtne ja ühtne üle terve veebilehe. Navigatsioon peab lehele minnes kohe näha olema. Soovitatav on paigutada menüü lehe ülaserva või vasakule. Menüü, otsing, keelevalik ja sulgemisnupp peavad olema veebilehel oodatavas kohas, igal alamlehel sarnases kohas. (WCAG 3.2.3)"
     }, {
         tags: "O des",
         content: "Tihedamini külastatavad lehed tuleb teha kiiresti kättesaadavaks, kuid harvem kasutatavate lehtedeni jõudmiseks võib minna rohkem aega."
-    }, {
-        tags: "AA des",
-        content: "Navigatsioon peab lehele minnes kohe näha olema. Soovitatav on paigutada menüü lehe ülaserva või vasakule. Menüü, otsing, keelevalik ja sulgemisnupp peavad olema veebilehel nähtaval ja oodatavas kohas, igal alamlehel sarnases kohas. (WCAG 3.2.3)"
     }, {
         tags: "M des",
         content: "Mobiilsetel lehtedel on mugav kasutada lisaks menüüle ka väikest hulka kerimisel kaasaliikuvaid kiirvalikuid lehe all- või ülaservas.<figure class='single'><img alt='Kiirvalikutega mobiilimenüü mobiili alumises servas' src='img/mobile-nav.png'><figcaption>Kiirvalikud mobiili alumises servas.</figcaption></figure>"
@@ -106,8 +103,8 @@ var contentData = [{
         tags: "O dev",
         content: "Juurdepääsetavaim viis navigatsioon esitamiseks on <b>&lt;nav role=“navigation” aria-label=“...”&gt;</b> märgendiga, mille sees on <b>&lt;ul&gt;</b> märgendiga esitatud nimekiri. Alammenüüga elemendile võiks lisada <b>aria-haspopup=“true”</b> atribuudi.<pre>&lt;nav role=“navigation” aria-label=“Menüü”&gt;<br>   &lt;ul&gt;<br>      &lt;li&gt;<br>         &lt;a href=“...”&gt;Avaleht&lt;/a&gt;<br>      &lt;/li&gt;<br>      &lt;li&gt;<br>         &lt;a href=“...” aria-haspopup=“true”&gt;Portfoolio&lt;/a&gt;&lt;/li&gt;<br>         &lt;ul&gt;<br>            &lt;li&gt;&lt;a href=“...”&gt;Maal&lt;/a&gt;&lt;/li&gt;<br>            &lt;li&gt;&lt;a href=“...”&gt;Foto&lt;/a&gt;&lt;/li&gt;<br>         &lt;/ul&gt;<br>      &lt;/li&gt;<br>      &lt;li&gt;<br>         &lt;a href=“...”&gt;Kontakt&lt;/a&gt;<br>      &lt;/li&gt;<br>   &lt;/ul&gt;<br>&lt;/nav&gt;</pre>"
     }, {
-        tags: "O sis",
-        content: "Menüüpunktid peavad olema sõnastatud nii, et oleks selge, mis nende all leidub."
+        tags: "A sis",
+        content: "Menüüpunktid peavad olema sõnastatud nii, et oleks selge, mis nende all leidub. (WCAG 2.4.4, 2.4.6)"
     }, {
         tags: "O des",
         content: "Vältida tuleks mitmetasemelisi menüüsid – jääda ühe või kahe taseme juurde."
@@ -134,7 +131,7 @@ var contentData = [{
         content: "Igal lehel peaks olema vähemalt üks <b>&lt;h1&gt;</b>."
     }, {
         tags: "A dev",
-        content: "Pealkirjad peavad järgnema üksteisele hierarhiliselt korrektses järjekorras. Järjekorra korrektsust saab kontrollida näiteks <a href='http://wave.webaim.org' target='_blank'>WAVE</a> tööriistaga.<pre>&lt;h1&gt;Esimese taseme pealkiri&lt;/h1&gt;<br />&lt;h2&gt;Teise taseme pealkiri&lt;/h2&gt;<br />&lt;h3&gt;Kolmanda taseme pealkiri&lt;/h3&gt;<br />&lt;h3&gt;Kolmanda taseme pealkiri&lt;/h3&gt;<br />&lt;h2&gt;Teise taseme pealkiri&lt;/h2&gt;<br />&lt;h2&gt;Teise taseme pealkiri&lt;/h2&gt;</pre>"
+        content: "Pealkirjad peavad järgnema üksteisele hierarhiliselt korrektses järjekorras. Järjekorra korrektsust saab kontrollida näiteks <a href='http://wave.webaim.org' target='_blank'>WAVE</a> tööriistaga. (WCAG 4.1.1)<pre>&lt;h1&gt;Esimese taseme pealkiri&lt;/h1&gt;<br />&lt;h2&gt;Teise taseme pealkiri&lt;/h2&gt;<br />&lt;h3&gt;Kolmanda taseme pealkiri&lt;/h3&gt;<br />&lt;h3&gt;Kolmanda taseme pealkiri&lt;/h3&gt;<br />&lt;h2&gt;Teise taseme pealkiri&lt;/h2&gt;<br />&lt;h2&gt;Teise taseme pealkiri&lt;/h2&gt;</pre>"
     }]
 }, {
     title: "Sisu paigutus",
@@ -152,10 +149,10 @@ var contentData = [{
         content: "Lehe sisu tuleb jagada mõistlike suurustega alamlehtedeks, et näidata kasutajale vaid seda, mille järgi ta on tulnud. Liiga pikad lehed võtavad kaua aega laadimiseks, liiga lühikesed lehed nõuavad kasutajalt edasi-tagasi navigeerimist."
     }, {
         tags: "A dev",
-        content: "Sisu kordamist ühe lehe ulatuses tuleb vältida, sest see võib olla ekraanilugejaga kasutajale olla segadusseajav ja tüütu. Korduvat sisu peab saama ülehüppamislinkidega vahele jätta."
+        content: "Sisu kordamist ühe lehe ulatuses tuleb vältida, sest see võib olla ekraanilugejaga kasutajale olla segadusseajav ja tüütu. Korduvat sisu peab saama ülehüppamislinkidega vahele jätta. (WCAG 2.4.1)"
     }, {
         tags: "A dev",
-        content: "Tabuleerimisjärjekord peab ühtima sisu loogilise järjekorraga: kasutaja võib olla sunnitud navigeerima klaviatuuriga ning vales järjekorras sisu kaotab oma mõtte."
+        content: "Tabuleerimisjärjekord peab ühtima sisu loogilise järjekorraga: kasutaja võib olla sunnitud navigeerima klaviatuuriga ning vales järjekorras sisu kaotab oma mõtte. (WCAG 2.4.3)"
     }]
 }, {
     title: "Tekst",
@@ -170,10 +167,10 @@ var contentData = [{
         content: "Märkide (näiteks “-“) asemel on soovituslik kasutada sõnu (näiteks “kuni”), sest tugitehnoloogiad võivad neid valesti lugeda (näiteks “miinus”)."
     }, {
         tags: "O sis",
-        content: "Lühendite kasutamisel tuleb nende seletus esimesel korral välja kirjutada."
+        content: "Lühendite kasutamisel tuleks nende seletus esimesel korral välja kirjutada. (WCAG AAA, kuid siiski soovituslik)"
     }, {
         tags: "O des",
-        content: "Ühes reas tohib olla kuni 90 tähemärki, mobiilis kuni 70 tähemärki."
+        content: "Ühes reas tohib olla kuni 90 tähemärki, mobiilis kuni 70 tähemärki. (WCAG AAA, kuid siiski soovituslik)"
     }, {
         tags: "O des",
         content: "Tekst peab olema joondatud vasakule."
@@ -230,7 +227,7 @@ var contentData = [{
         content: "<b>Fokuseeritud link</b> peab olema teistest visuaalselt eristatav."
     }, {
         tags: "A sis",
-        content: "Lingi tekstist (ning kontekstist) peab saama selgelt aru, mis sellele vajutades juhtub. (WCAG 2.4.4) Lingi tekst peaks algama kõige tähtsama ja sisukama sõnaga. Lingi tekst ei tohiks olla lihtsalt <b>“Kliki siia”</b> või <b>“Rohkem”</b> ega lihtsalt <b>URL</b>, sest ekraanilugeja loeb selle ette täht haaval. Lingi tekst ei tohiks sisaldada sõna <b>“link”</b>, sest ekraanilugejad ütlevad, et tegu on lingiga. Nägijate jaoks peavad lingid olema tekstist visuaalselt eristatavad."
+        content: "Lingi tekstist (ning seda ümbristevast kontekstist) peab saama selgelt aru, mis sellele vajutades juhtub. (WCAG 2.4.4) Lingi tekst peaks algama kõige tähtsama ja sisukama sõnaga. Lingi tekst ei tohiks olla lihtsalt <b>“Kliki siia”</b> või <b>“Rohkem”</b> ega lihtsalt <b>URL</b>, sest ekraanilugeja loeb selle ette täht haaval. Lingi tekst ei tohiks sisaldada sõna <b>“link”</b>, sest ekraanilugejad ütlevad, et tegu on lingiga. Nägijate jaoks peavad lingid olema tekstist visuaalselt eristatavad."
     }, {
         tags: "O dev",
         content: "Sama tekstiga lingid ei tohi viia erinevatele lehtedele."
