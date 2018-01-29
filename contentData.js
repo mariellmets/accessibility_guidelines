@@ -317,10 +317,10 @@ var contentData = [{
         content: "Veebilehel olevale helile ja videole peab lisama kirjeldava <b>title=”...”</b> atribuudi. (WCAG 1.1.1)"
     }, {
         tags: "A dev",
-        content: "<b>Eellindistatud</b> helifailile tuleb lisada <b>sünkroonsed subtiitrid</b>, kui kogu edastatav info pole lehelt teisiti kättesaadav. (WCAG 1.2.2)"
+        content: "<b>Eellindistatud</b> videofailile tuleb lisada <b>sünkroonsed subtiitrid</b>, kui kogu edastatav info pole lehelt teisiti kättesaadav. (WCAG 1.2.2)"
     }, {
         tags: "A dev",
-        content: "Eellindistatud heli- ja videofailidele tuleb lisada <b>tekstiline sisukirjeldus</b>, mis asub või millele viidatakse faili vahetus läheduses. Näiteks võib videole lisada tekstilise kirjelduse <b>&lt;track&gt;</b> märgendiga <b>&lt;video&gt;</b> märgendi sees. Ilma helita videole võib tekstiline alternatiivi asemel lisada sama sisu edasi andva <b>helifaili</b>. (WCAG 1.2.1, 1.2.3)<pre>&lt;video controls&gt;<br>   &lt;source src=“video.mp4” srclang=“et” type=“video/mp4”&gt;<br>   &lt;track src=“description.vtt” kind=“descriptions” srclang=“et” label=“Video kirjeldus”&gt;<br>&lt;/video&gt;</pre>"
+        content: "Eellindistatud heli- ja videofailidele tuleb lisada <b>tekstiline sisukirjeldus</b>, mis asub või millele viidatakse faili vahetus läheduses. Näiteks võib videole lisada tekstilise kirjelduse <b>&lt;track&gt;</b> märgendiga <b>&lt;video&gt;</b> märgendi sees. Ilma helita videole või animatsioonile võib tekstiline alternatiivi asemel lisada sama sisu edasi andva <b>helifaili</b>. (WCAG 1.2.1, 1.2.3)<pre>&lt;video controls&gt;<br>   &lt;source src=“video.mp4” srclang=“et” type=“video/mp4”&gt;<br>   &lt;track src=“description.vtt” kind=“descriptions” srclang=“et” label=“Video kirjeldus”&gt;<br>&lt;/video&gt;</pre>"
     }, {
         tags: "AA dev",
         content: "<b>Reaalajas</b> edastatavale helifailile tuleb lisada <b>sünkroonsed subtiitrid</b> kasutajate jaoks, kes ei kuule või kuulevad halvasti. (WCAG 1.2.4)"
