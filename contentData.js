@@ -122,7 +122,7 @@ var contentData = [{
         content: "Pealkirjad peavad olema visuaalselt hästi eristatavad - suured ja selged."
     }, {
         tags: "A dev",
-        content: "Pealkirjad tuleb eristada märgenditega <b>&lt;h1&gt;</b> kuni <b>&lt;h6&gt;</b>, mitte ainult kujundusega. Pealkirjadena <b>&lt;h1&gt;</b> kuni <b>&lt;h6&gt;</b> ei tohi esitada teksti, mis pole tegelikult pealkiri. (WCAG 1.3.1)"
+        content: "Pealkirjad tuleb eristada märgenditega <b>&lt;h1&gt;</b> kuni <b>&lt;h6&gt;</b>, mitte ainult kujundusega. Pealkirjadena <b>&lt;h1&gt;</b> kuni <b>&lt;h6&gt;</b> ei tohi esitada teksti, mis pole tegelikult pealkiri. (WCAG 1.3.1, 2.4.6)"
     }, {
         tags: "AA sis",
         content: "Pealkiri peab olema lühike, kuid sisukas ning kirjeldama sellele pealkirjale järgnevat sisu. (WCAG 2.4.6) Pealkiri peab algama kõige tähtsama ja sisukama sõnaga."
